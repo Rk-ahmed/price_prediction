@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Price Prediction</title></head>
+<body>
+<h1>California Housing Price Prediction</h1>
+<form method="post">
+ Longitude: <input type="text" name="longitude"><br>
+ Latitude: <input type="text" name="latitude"><br>
+ Housing Median Age: <input type="text" name="housing_median_age"><br>
+ Total Rooms: <input type="text" name="total_rooms"><br>
+ Total Bedrooms: <input type="text" name="total_bedrooms"><br>
+ Population: <input type="text" name="population"><br>
+ Households: <input type="text" name="households"><br>
+ Median Income: <input type="text" name="median_income"><br>
+<input type="submit" value="Predict">
+</form>
+ {% if prediction %}
+<h3>Predicted House Value: ${{ prediction | round(2) }}</h3>
+ {% endif %}
+</body>
+</html
